@@ -1,0 +1,18 @@
+class Solution:
+    def sortColors(self, nums: List[int]) -> None:
+        count = [0] * 3
+        for num in nums:
+            count[num] += 1
+        
+        index = 0 
+        num = 0
+
+        for i in range(3):
+            while count[i] != 0:
+                count[i] -= 1
+                nums[index] = i
+                index += 1
+
+            
+
+        
